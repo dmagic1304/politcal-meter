@@ -10,8 +10,8 @@ function hideResults() {
 let liberal = 0;
 let conservative = 0;
 let error = 0;
-window.onload = function() {
-  document.querySelector("form").onsubmit = function(event) {
+window.addEventListener("load", function() {
+  document.querySelector("form").addEventListener('submit', function(event) {
     event.preventDefault();
     hideResults();
     const answer1 = document.querySelector("input#question1input").value;
@@ -68,8 +68,10 @@ window.onload = function() {
     } else {
       document.querySelector("div#error").removeAttribute("class")
     }
-  };
+  }
+  );
 }
+);
 
 
 
